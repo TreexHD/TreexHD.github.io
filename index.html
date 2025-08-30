@@ -1,54 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Treex</title>
-<style>
-body {
-margin: 0;
-font-family: sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background: linear-gradient(135deg, #22d3ee, #60a5fa);
-color: white;
-text-align: center;
-}
-.container {
-background: rgba(0, 0, 0, 0.4);
-padding: 2rem;
-border-radius: 1rem;
-}
-h1 {
-font-size: 3rem;
-margin-bottom: 0.5rem;
-}
-p {
-font-size: 1.2rem;
-margin-bottom: 1rem;
-}
-a {
-display: inline-block;
-padding: 0.5rem 1.2rem;
-background: #ffffff;
-color: #333;
-border-radius: 999px;
-text-decoration: none;
-font-weight: bold;
-transition: background 0.3s;
-}
-a:hover {
-background: #ddd;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>treex — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<h1>Treex</h1>
-<p>Welcome to my website</p>
-<a href="#">Enter</a>
-</div>
+  <header>
+    <h1>treex</h1>
+  </header>
+
+  <main>
+    <section id="repos">
+      <h2>My Projects</h2>
+      <ul class="repo-list">
+        <!-- JavaScript will populate this list with GitHub repos -->
+      </ul>
+    </section>
+
+    <section class="download-section">
+      <a href="downloads.html" class="btn">Downloads</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script> <!-- Optional dynamic fetch -->
 </body>
 </html>
