@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Treex</title>
+<meta name="description" content="Treex — A clean, elegant landing title page" />
+<meta property="og:title" content="Treex" />
+<meta property="og:description" content="A clean, elegant landing title page" />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0ea5e9" />
+<style>
+:root{
+--bg: #0b1120; /* deep navy */
+--bg-accent: #0ea5e933;/* sky-500 @ 20% */
+--card: #0f172a; /* slate-900 */
+--text: #e5e7eb; /* zinc-200 */
+--muted: #9ca3af; /* gray-400 */
+--brand-1: #22d3ee; /* cyan-400 */
+--brand-2: #60a5fa; /* blue-400 */
+--ring: #38bdf8; /* sky-400 */
+}
+@media (prefers-color-scheme: light) {
+:root{
+--bg: #f8fafc; /* slate-50 */
+--bg-accent: #60a5fa22;
+--card: #ffffff;
+--text: #0f172a;
+--muted: #475569;
+}
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+margin: 0;
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+color: var(--text);
+background: radial-gradient(80vmax 60vmax at 80% -10%, var(--bg-accent), transparent 60%),
+radial-gradient(70vmax 50vmax at -10% 110%, var(--bg-accent), transparent 60%),
+var(--bg);
+display: grid;
+place-items: center;
+}
+.card {
+width: min(92vw, 860px);
+padding: clamp(1.25rem, 4vw, 2.75rem);
+background: color-mix(in oklab, var(--card), transparent 8%);
+border: 1px solid color-mix(in oklab, var(--ring), transparent 80%);
+border-radius: 1.5rem;
+box-shadow: 0 10px 30px rgba(0,0,0,.25);
+backdrop-filter: blur(8px) saturate(120%);
+text-align: center;
+position: relative;
+overflow: clip;
+isolation: isolate;
+}
+.glow {
+position: absolute;
+inset: -40%;
+background: conic-gradient(from 0deg, transparent 0 70%, var(--brand-1), var(--brand-2));
+filter: blur(60px) saturate(120%);
+opacity: 0.08;
+z-index: -1;
+animation: spin 20s linear infinite;
+}
+@keyframes spin { to { transform: rotate(1turn); } }
+
+
+.logo-wrap { display: inline-grid; place-items: center; margin-bottom: 1rem; }
+.logo {
+width: clamp(64px, 12vw, 96px);
+height: auto;
+filter: drop-shadow(0 6px 14px rgba(0,0,0,.25));
+animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-6px); }
+}
+
+
+h1 {
+font-size: clamp(2rem, 6vw, 4rem);
+margin: 0.25rem 0 0.5rem;
+</html>
